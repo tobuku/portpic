@@ -5,15 +5,16 @@
 }
 
 :root {
-  --bg: #0f172a;
-  --bg-alt: #020617;
-  --card-bg: #020617;
-  --border-subtle: #1f2937;
-  --accent: #38bdf8;
-  --accent-soft: #e0f2fe;
-  --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
+  --bg: #ffffff;
+  --bg-alt: #f8f8f8;
+  --card-bg: #ffffff;
+  --border-subtle: #d3d3d3;
+  --accent: #007aff; 
+  --accent-soft: #e6f0ff;
+  --text-main: #111111;
+  --text-muted: #555555;
 }
+
 
 body {
   margin: 0;
