@@ -9,20 +9,29 @@
   --bg-alt: #f8f8f8;
   --card-bg: #ffffff;
   --border-subtle: #d3d3d3;
-  --accent: #007aff; 
+  --accent: #007aff;
   --accent-soft: #e6f0ff;
   --text-main: #111111;
   --text-muted: #555555;
 }
 
+/* Utility */
+
+.hidden {
+  display: none;
+}
+
+/* Layout basics */
 
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-background: var(--bg);
-color: var(--text-main);
+  background: var(--bg);
+  color: var(--text-main);
   min-height: 100vh;
 }
+
+/* Header */
 
 .header {
   border-bottom: 1px solid var(--border-subtle);
@@ -51,11 +60,15 @@ color: var(--text-main);
   color: var(--text-muted);
 }
 
+/* Main shell */
+
 .main {
   max-width: 1120px;
   margin: 0 auto;
   padding: 1.5rem;
 }
+
+/* Search */
 
 .search-section {
   margin-bottom: 1.5rem;
@@ -73,7 +86,7 @@ color: var(--text-main);
   padding: 0.7rem 0.9rem;
   border-radius: 0.5rem;
   border: 1px solid var(--border-subtle);
-  background: #020617;
+  background: #ffffff;
   color: var(--text-main);
   font-size: 0.95rem;
   outline: none;
@@ -81,7 +94,7 @@ color: var(--text-main);
 
 .search-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 0 1px rgba(0, 122, 255, 0.4);
 }
 
 .hint {
@@ -89,6 +102,8 @@ color: var(--text-main);
   color: var(--text-muted);
   margin-top: 0.4rem;
 }
+
+/* Two-column layout */
 
 .layout {
   display: grid;
@@ -102,12 +117,14 @@ color: var(--text-main);
   }
 }
 
+/* Panels */
+
 .results-panel,
 .device-panel {
- background: var(--card-bg);
+  background: var(--card-bg);
   border-radius: 0.75rem;
-border: 1px solid var(--border-subtle);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
   padding: 1rem;
 }
 
@@ -118,6 +135,8 @@ border: 1px solid var(--border-subtle);
   letter-spacing: 0.08em;
   color: var(--text-muted);
 }
+
+/* Device list */
 
 .results-list {
   list-style: none;
@@ -135,12 +154,12 @@ border: 1px solid var(--border-subtle);
 }
 
 .result-item:hover {
-  background: rgba(15, 23, 42, 0.9);
-  border-color: var(--border-subtle);
+  background: var(--accent-soft);
+  border-color: var(--accent);
 }
 
 .result-item.active {
-  background: rgba(56, 189, 248, 0.08);
+  background: var(--accent-soft);
   border-color: var(--accent);
 }
 
@@ -152,6 +171,8 @@ border: 1px solid var(--border-subtle);
   font-size: 0.75rem;
   color: var(--text-muted);
 }
+
+/* Device placeholder and detail */
 
 .device-placeholder {
   text-align: left;
@@ -201,6 +222,8 @@ border: 1px solid var(--border-subtle);
   margin: 0.25rem 0 0.6rem;
 }
 
+/* Images */
+
 .device-images {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -211,8 +234,9 @@ border: 1px solid var(--border-subtle);
   width: 100%;
   border-radius: 0.5rem;
   border: 1px solid var(--border-subtle);
-  background: #020617;
+  background: #ffffff;
   display: block;
+  font-size: 0; /* hides alt text when images are missing */
 }
 
 .image-caption {
@@ -221,10 +245,12 @@ border: 1px solid var(--border-subtle);
   margin-top: 0.1rem;
 }
 
+/* Ports card */
+
 .ports-card {
   border-radius: 0.6rem;
   border: 1px solid var(--border-subtle);
-  background: #020617;
+  background: var(--card-bg);
   padding: 0.75rem;
 }
 
@@ -245,7 +271,7 @@ border: 1px solid var(--border-subtle);
 
 .port-item {
   padding: 0.3rem 0;
-  border-bottom: 1px dashed rgba(148, 163, 184, 0.3);
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.6);
 }
 
 .port-item:last-child {
@@ -266,13 +292,15 @@ border: 1px solid var(--border-subtle);
   margin-top: 0.7rem;
   font-size: 0.8rem;
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  border-top: 1px solid rgba(148, 163, 184, 0.6);
 }
 
 .quick-script strong {
   display: block;
   margin-bottom: 0.2rem;
 }
+
+/* Footer */
 
 .footer {
   max-width: 1120px;
