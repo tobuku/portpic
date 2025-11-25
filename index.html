@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PortPic - Visual Port Guide for Support Techs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1>PortPic</h1>
+      <p class="tagline">Show customers exactly what they are looking at.</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="search-section">
+      <label for="search-input" class="search-label">
+        Search by model name or brand
+      </label>
+      <input
+        id="search-input"
+        class="search-input"
+        type="search"
+        placeholder="Try &quot;Edgewater 2900&quot; or &quot;Yealink&quot;"
+        autocomplete="off"
+      />
+      <p class="hint">
+        Built for remote support techs who need fast, visual confirmation of physical ports.
+      </p>
+    </section>
+
+    <section class="layout">
+      <aside class="results-panel">
+        <h2 class="panel-title">Devices</h2>
+        <ul id="results-list" class="results-list">
+          <!-- Results injected by app.js -->
+        </ul>
+      </aside>
+
+      <section class="device-panel">
+        <div id="device-placeholder" class="device-placeholder">
+          <h2>Select a device</h2>
+          <p>
+            Start typing a model number, then pick a device to see ports and annotated photos.
+          </p>
+        </div>
+        <div id="device-detail" class="device-detail hidden">
+          <!-- Device detail injected by app.js -->
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>PortPic - Visual port lookup for home, private, and corporate tech support.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
