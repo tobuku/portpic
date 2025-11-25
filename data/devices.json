@@ -1,0 +1,90 @@
+[
+  {
+    "id": "edgewater-2900",
+    "name": "Edgewater 2900 Series",
+    "brand": "Edgewater Networks",
+    "category": "Edge router",
+    "summary": "Small business edge router typically installed at customer sites for managed voice or data services.",
+    "ports": [
+      {
+        "label": "WAN",
+        "type": "Ethernet",
+        "position": "rear panel, left-most RJ45 port",
+        "color": "often blue or labeled WAN",
+        "script": "On the back of the Edgewater, find the first Ethernet jack on the left labeled WAN. Confirm the cable is fully clicked in on both the router and the upstream modem."
+      },
+      {
+        "label": "LAN 1",
+        "type": "Ethernet",
+        "position": "rear panel, second RJ45 port",
+        "color": "often yellow or unlabeled",
+        "script": "To reseat LAN 1, unplug the second Ethernet jack from the left, wait 3 seconds, then push it back in until you hear or feel the click."
+      },
+      {
+        "label": "Reset",
+        "type": "Recessed button",
+        "position": "rear panel, small pinhole near the power port",
+        "color": "unmarked pinhole",
+        "script": "Only use this if directed by support. It is a small pinhole button near the power plug and requires a paperclip to press."
+      }
+    ],
+    "images": [
+      {
+        "file": "images/edgewater-2900/overview.jpg",
+        "label": "Front and rear overview"
+      },
+      {
+        "file": "images/edgewater-2900/rear.jpg",
+        "label": "Rear panel with Ethernet and power"
+      },
+      {
+        "file": "images/edgewater-2900/wan-closeup.jpg",
+        "label": "Close up of WAN port"
+      }
+    ]
+  },
+  {
+    "id": "yealink-t54w",
+    "name": "Yealink T54W",
+    "brand": "Yealink",
+    "category": "IP desk phone",
+    "summary": "Business IP phone commonly used in hosted voice deployments with PoE and PC pass-through ports.",
+    "ports": [
+      {
+        "label": "Internet",
+        "type": "Ethernet",
+        "position": "rear panel, center, marked with network icon",
+        "color": "usually gray, labeled Internet or WAN",
+        "script": "Turn the phone around so you are looking at the underside. Find the jack labeled Internet. Make sure the cable from the wall or switch is plugged firmly into this port."
+      },
+      {
+        "label": "PC",
+        "type": "Ethernet",
+        "position": "rear panel, next to Internet port",
+        "color": "usually gray, labeled PC",
+        "script": "If a computer is chained through the phone, it should be plugged into the port labeled PC which sits beside the Internet port."
+      },
+      {
+        "label": "Headset",
+        "type": "RJ9 or USB",
+        "position": "rear or side depending on revision",
+        "color": "small square jack or USB slot",
+        "script": "For wired headsets, locate the small headset jack or USB slot on the back or side. Gently reseat the connector until it is fully seated."
+      }
+    ],
+    "images": [
+      {
+        "file": "images/yealink-t54w/overview.jpg",
+        "label": "Phone front and rear overview"
+      },
+      {
+        "file": "images/yealink-t54w/rear.jpg",
+        "label": "Rear panel Ethernet and headset ports"
+      },
+      {
+        "file": "images/yealink-t54w/ports-closeup.jpg",
+        "label": "Close up of Internet and PC ports"
+      }
+    ]
+  }
+]
