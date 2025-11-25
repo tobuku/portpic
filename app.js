@@ -6,17 +6,38 @@ const resultsList = document.getElementById("results-list");
 const devicePlaceholder = document.getElementById("device-placeholder");
 const deviceDetail = document.getElementById("device-detail");
 
+// Small helper in case elements are missing
+function safeGet(id) {
+  const el = document.getElementById(id);
+  if (!el) {
+    console.error(`Element with id="${id}" not found in DOM`);
+  }
+  return el;
+}
+
 async function loadDevices() {
   try {
-    const res = await fetch("data/devices.json");
+    console.log("Loading devices.json from data/devices.json");
+    const res = await fetch("data/devices.json", { cache: "no-store" });
     if (!res.ok) {
-      throw new Error("Failed to load devices.json");
+      throw new Error(`Failed to load devices.json: ${res.status} ${res.statusText}`);
     }
-    devices = await res.json();
+
+    const json = await res.json();
+    if (!Array.isArray(json)) {
+      throw new Error("devices.json is not an array at the top level");
+    }
+
+    devices = json;
+    console.log(`Loaded ${devices.length} devices`);
     renderResults("");
   } catch (err) {
-    console.error(err);
-    resultsList.innerHTML = "<li class='result-item'>Could not load device data.</li>";
+    console.error("Error loading devices:", err);
+    resultsList.innerHTML = `
+      <li class="result-item">
+        Could not load device data. Check the browser console for details.
+      </li>
+    `;
   }
 }
 
@@ -83,7 +104,6 @@ function selectDevice(id) {
 
   activeDeviceId = id;
 
-  // Update active classes on list items
   document
     .querySelectorAll(".result-item")
     .forEach((el) => el.classList.toggle("active", el.dataset.id === id));
@@ -94,7 +114,7 @@ function selectDevice(id) {
 }
 
 function renderDeviceDetail(device) {
-  const portsHtml = device.ports
+  const portsHtml = (device.ports || [])
     .map((port) => {
       const metaParts = [];
       if (port.type) metaParts.push(port.type);
@@ -119,11 +139,11 @@ function renderDeviceDetail(device) {
   const imagesHtml = (device.images || [])
     .map(
       (img) => `
-      <figure>
-        <img src="${img.file}" alt="${img.label}" loading="lazy" />
-        <figcaption class="image-caption">${img.label}</figcaption>
-      </figure>
-    `
+        <figure>
+          <img src="${img.file}" alt="${img.label}" loading="lazy" />
+          <figcaption class="image-caption">${img.label}</figcaption>
+        </figure>
+      `
     )
     .join("");
 
@@ -135,24 +155,34 @@ function renderDeviceDetail(device) {
         ${device.summary ? `<p class="device-summary">${device.summary}</p>` : ""}
       </div>
       <div class="device-images">
-        ${imagesHtml || "<p class='device-summary'>Images for this device are coming soon.</p>"}
+        ${
+          imagesHtml ||
+          "<p class='device-summary'>Images for this device are coming soon.</p>"
+        }
       </div>
     </div>
     <aside>
       <div class="ports-card">
         <h3 class="ports-title">Key ports</h3>
         <ul class="port-list">
-          ${portsHtml || "<li class='port-item'>No port data available yet.</li>"}
+          ${
+            portsHtml ||
+            "<li class='port-item'>No port data available yet.</li>"
+          }
         </ul>
       </div>
     </aside>
   `;
 }
 
-// Wire up events
-searchInput.addEventListener("input", (e) => {
-  renderResults(e.target.value);
-});
+// Ensure DOM is ready before grabbing elements and starting
+document.addEventListener("DOMContentLoaded", () => {
+  const input = safeGet("search-input");
+  if (input) {
+    input.addEventListener("input", (e) => {
+      renderResults(e.target.value);
+    });
+  }
 
-// Load initial data
-loadDevices();
+  loadDevices();
+});
