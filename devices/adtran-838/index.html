@@ -49,11 +49,11 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Adtran-838__SHDSL_Ports.jpg" alt="Adtran 838 SHDSL ports" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Adtran-838-Eth_Ports.jpg" alt="Adtran 838 Ethernet ports" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Adtran-838_Side.jpg" alt="Adtran 838 side view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Adtran-838-Side.jpg" alt="Adtran 838 side view alternate" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Adtran-838__SHDSL_Ports.jpg" alt="Adtran 838 SHDSL ports" loading="lazy" />
+        <img src="../../assets/images/Adtran-838-Eth_Ports.jpg" alt="Adtran 838 Ethernet ports" loading="lazy" />
+        <img src="../../assets/images/Adtran-838_Side.jpg" alt="Adtran 838 side view" loading="lazy" />
+        <img src="../../assets/images/Adtran-838-Side.jpg" alt="Adtran 838 side view alternate" loading="lazy" />
       </div>
     </section>
 
@@ -81,5 +81,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>

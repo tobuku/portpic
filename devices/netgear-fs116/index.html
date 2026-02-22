@@ -47,10 +47,10 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Model-FS116-ProSafe-16-Port-10_100-Switch-w_PoE.jpg" alt="Netgear FS116 ProSafe front view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Model-FS116-ProSafe_16-Port-10_100-Switch-w_PoE.jpg" alt="Netgear FS116 ProSafe alternate view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Model_FS116-ProSafe-16-Port-10_100-Switch-w_PoE.jpg" alt="Netgear FS116 ProSafe ports view" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Model-FS116-ProSafe-16-Port-10_100-Switch-w_PoE.jpg" alt="Netgear FS116 ProSafe front view" loading="lazy" />
+        <img src="../../assets/images/Model-FS116-ProSafe_16-Port-10_100-Switch-w_PoE.jpg" alt="Netgear FS116 ProSafe alternate view" loading="lazy" />
+        <img src="../../assets/images/Model_FS116-ProSafe-16-Port-10_100-Switch-w_PoE.jpg" alt="Netgear FS116 ProSafe ports view" loading="lazy" />
       </div>
     </section>
 
@@ -78,5 +78,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>

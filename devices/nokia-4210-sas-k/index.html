@@ -50,11 +50,11 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch.jpg" alt="Nokia 4210 SAS-K front view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch-scaled-e1720378572404.jpg" alt="Nokia 4210 SAS-K alternate view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch-2-scaled-e1720378596456.jpg" alt="Nokia 4210 SAS-K ports view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch-3-scaled-e1720378621800.jpg" alt="Nokia 4210 SAS-K rear view" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch.jpg" alt="Nokia 4210 SAS-K front view" loading="lazy" />
+        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch-scaled-e1720378572404.jpg" alt="Nokia 4210 SAS-K alternate view" loading="lazy" />
+        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch-2-scaled-e1720378596456.jpg" alt="Nokia 4210 SAS-K ports view" loading="lazy" />
+        <img src="../../assets/images/Nokia-4210-SAS-K-Service-Access-Switch-3-scaled-e1720378621800.jpg" alt="Nokia 4210 SAS-K rear view" loading="lazy" />
       </div>
     </section>
 
@@ -82,5 +82,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>

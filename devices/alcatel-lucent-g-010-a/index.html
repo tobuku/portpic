@@ -48,11 +48,11 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A-Ports.jpg" alt="Alcatel-Lucent G-010-A ONT ports" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A-Side.jpg" alt="Alcatel-Lucent G-010-A ONT side view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A-Bottom.jpg" alt="Alcatel-Lucent G-010-A ONT bottom view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A_Top.jpg" alt="Alcatel-Lucent G-010-A ONT top view" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A-Ports.jpg" alt="Alcatel-Lucent G-010-A ONT ports" loading="lazy" />
+        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A-Side.jpg" alt="Alcatel-Lucent G-010-A ONT side view" loading="lazy" />
+        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A-Bottom.jpg" alt="Alcatel-Lucent G-010-A ONT bottom view" loading="lazy" />
+        <img src="../../assets/images/Alcatel_Lucent-Model-G-010-A_Top.jpg" alt="Alcatel-Lucent G-010-A ONT top view" loading="lazy" />
       </div>
     </section>
 
@@ -80,5 +80,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>

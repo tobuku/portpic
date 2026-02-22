@@ -51,11 +51,11 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-1.jpg" alt="Cisco SF300-24 view 1" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-2.jpg" alt="Cisco SF300-24 view 2" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-Ports-1.jpg" alt="Cisco SF300-24 ports view 1" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-Ports-2.jpg" alt="Cisco SF300-24 ports view 2" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-1.jpg" alt="Cisco SF300-24 view 1" loading="lazy" />
+        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-2.jpg" alt="Cisco SF300-24 view 2" loading="lazy" />
+        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-Ports-1.jpg" alt="Cisco SF300-24 ports view 1" loading="lazy" />
+        <img src="../../assets/images/Cisco-SF300-24-Port-10100-PoE-Ports-2.jpg" alt="Cisco SF300-24 ports view 2" loading="lazy" />
       </div>
     </section>
 
@@ -83,5 +83,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>

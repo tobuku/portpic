@@ -51,12 +51,12 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT-Front.jpg" alt="Nokia G-240G-A ONT front view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT_Side.jpg" alt="Nokia G-240G-A ONT side view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT.Side_.jpg" alt="Nokia G-240G-A ONT alternate side view" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT-Lights.jpg" alt="Nokia G-240G-A ONT indicator lights" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT-Bottom-Serial-Number.jpg" alt="Nokia G-240G-A ONT bottom serial number" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT-Front.jpg" alt="Nokia G-240G-A ONT front view" loading="lazy" />
+        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT_Side.jpg" alt="Nokia G-240G-A ONT side view" loading="lazy" />
+        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT.Side_.jpg" alt="Nokia G-240G-A ONT alternate side view" loading="lazy" />
+        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT-Lights.jpg" alt="Nokia G-240G-A ONT indicator lights" loading="lazy" />
+        <img src="../../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT-Bottom-Serial-Number.jpg" alt="Nokia G-240G-A ONT bottom serial number" loading="lazy" />
       </div>
     </section>
 
@@ -84,5 +84,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>

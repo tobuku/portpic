@@ -50,13 +50,13 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Left-Facing-Ports.jpg" alt="Cisco SG500-52P left facing ports" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Right-Facing-Ports.jpg" alt="Cisco SG500-52P right facing ports" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Ports_Close-Up.jpg" alt="Cisco SG500-52P ports close-up" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Back-Console-Port.jpg" alt="Cisco SG500-52P back console port" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Power-Port.jpg" alt="Cisco SG500-52P power port" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Top.jpg" alt="Cisco SG500-52P top view" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Left-Facing-Ports.jpg" alt="Cisco SG500-52P left facing ports" loading="lazy" />
+        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Right-Facing-Ports.jpg" alt="Cisco SG500-52P right facing ports" loading="lazy" />
+        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Ports_Close-Up.jpg" alt="Cisco SG500-52P ports close-up" loading="lazy" />
+        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Back-Console-Port.jpg" alt="Cisco SG500-52P back console port" loading="lazy" />
+        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Power-Port.jpg" alt="Cisco SG500-52P power port" loading="lazy" />
+        <img src="../../assets/images/Cisco-Model-SG500-52P-Switch-Top.jpg" alt="Cisco SG500-52P top view" loading="lazy" />
       </div>
     </section>
 
@@ -84,5 +84,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>

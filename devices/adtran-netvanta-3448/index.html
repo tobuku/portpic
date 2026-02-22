@@ -49,10 +49,10 @@
 
     <section class="card prose" style="margin-top:14px">
       <h2 class="h2">Photos</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
-        <img src="../../assets/images/Adtran-ModelNetVanta-3448_Back-and-Ports.jpg" alt="Adtran NetVanta 3448 back and ports" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Adtran-ModelNetVanta-3448_Front_Status-Lights.jpg" alt="Adtran NetVanta 3448 front status lights" style="width:100%;border-radius:12px" loading="lazy" />
-        <img src="../../assets/images/Adtran-ModelNetVanta-3448_Bottom.jpg" alt="Adtran NetVanta 3448 bottom view" style="width:100%;border-radius:12px" loading="lazy" />
+      <div class="photo-grid">
+        <img src="../../assets/images/Adtran-ModelNetVanta-3448_Back-and-Ports.jpg" alt="Adtran NetVanta 3448 back and ports" loading="lazy" />
+        <img src="../../assets/images/Adtran-ModelNetVanta-3448_Front_Status-Lights.jpg" alt="Adtran NetVanta 3448 front status lights" loading="lazy" />
+        <img src="../../assets/images/Adtran-ModelNetVanta-3448_Bottom.jpg" alt="Adtran NetVanta 3448 bottom view" loading="lazy" />
       </div>
     </section>
 
@@ -80,5 +80,9 @@
     </div>
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
+  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
+  <script>
+    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
+  </script>
 </body>
 </html>
