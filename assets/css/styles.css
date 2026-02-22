@@ -216,19 +216,38 @@ h1{font-size:44px;line-height:1.05;margin:10px 0 10px;color:var(--text)}
   border:1px solid var(--line);
   border-left:3px solid var(--accent);
   border-radius:10px;
-  padding:14px 14px 14px 16px;
+  padding:12px;
   background:var(--card);
   color:var(--text);
   font-weight:600;
   font-size:14px;
   display:flex;
   flex-direction:column;
-  gap:6px;
+  gap:8px;
   transition:border-color .2s, box-shadow .2s, transform .15s;
   position:relative;
+  overflow:hidden;
 }
-.aff-item::after{
-  content:"Shop on Amazon \2192";
+.aff-item-img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:contain;
+  border-radius:6px;
+  background:#f5f6f8;
+  display:block;
+}
+.aff-item-label{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.aff-item-name{
+  font-weight:600;
+  font-size:14px;
+  color:var(--text);
+  line-height:1.3;
+}
+.aff-item-cta{
   font-size:12px;
   font-weight:500;
   color:var(--accent);
@@ -242,7 +261,7 @@ h1{font-size:44px;line-height:1.05;margin:10px 0 10px;color:var(--text)}
   box-shadow:0 4px 14px rgba(24,151,220,.15);
   transform:translateY(-1px);
 }
-.aff-item:hover::after{
+.aff-item:hover .aff-item-cta{
   opacity:1;
 }
 /* Category accent variants */
