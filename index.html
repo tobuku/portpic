@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ports. PortPic</title>
+  <meta name="description" content="Port types and compatibility guides." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a href="/devices/">Devices</a>
+        <a class="active" href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>Ports</h1>
+    <p class="lead">Port names. What they do. What limits apply.</p>
+
+    <section class="grid-3">
+      <article class="card">
+        <h2 class="h3">USB-C</h2>
+        <p class="muted">Power, data, video modes. Cable traps.</p>
+        <a class="link" href="/guides/usb-c/">Read guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">HDMI</h2>
+        <p class="muted">Versions, bandwidth, ARC and eARC.</p>
+        <a class="link" href="/guides/hdmi/">Read guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">DisplayPort</h2>
+        <p class="muted">Alt mode, adapters, refresh rate.</p>
+        <a class="link" href="/guides/displayport/">Read guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Ethernet</h2>
+        <p class="muted">Link speed, LEDs, cables, PoE basics.</p>
+        <a class="link" href="/guides/ethernet/">Read guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Optical audio</h2>
+        <p class="muted">TOSLINK, formats, limits.</p>
+        <a class="link" href="/guides/optical-audio/">Read guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">3.5 mm audio</h2>
+        <p class="muted">TRS vs TRRS. Headset wiring.</p>
+        <a class="link" href="/guides/3-5mm/">Read guide</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">© <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
