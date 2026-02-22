@@ -190,29 +190,67 @@ h1{font-size:44px;line-height:1.05;margin:10px 0 10px;color:var(--text)}
 .prose li{margin:10px 0}
 .aff-box{
   margin-top:16px;
-  border:1px solid rgba(24,151,220,.3);
-  background:rgba(24,151,220,.04);
+  border:1px solid rgba(24,151,220,.25);
+  background:linear-gradient(135deg,rgba(24,151,220,.03),rgba(241,115,29,.03));
   border-radius:14px;
-  padding:14px;
+  padding:18px;
 }
-.aff-title{font-weight:800;margin-bottom:10px;color:var(--text)}
-.aff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.aff-title{
+  font-weight:800;
+  margin-bottom:12px;
+  color:var(--text);
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.aff-title::before{
+  content:"\1F6D2";
+  font-size:18px;
+}
+.aff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 @media (max-width:920px){
   .aff-grid{grid-template-columns:1fr}
 }
 .aff-item{
   border:1px solid var(--line);
-  border-radius:12px;
-  padding:10px;
+  border-left:3px solid var(--accent);
+  border-radius:10px;
+  padding:14px 14px 14px 16px;
   background:var(--card);
-  color:var(--accent);
+  color:var(--text);
+  font-weight:600;
+  font-size:14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  transition:border-color .2s, box-shadow .2s, transform .15s;
+  position:relative;
+}
+.aff-item::after{
+  content:"Shop on Amazon \2192";
+  font-size:12px;
   font-weight:500;
+  color:var(--accent);
+  opacity:.7;
+  transition:opacity .2s;
 }
 .aff-item:hover{
   border-color:var(--accent);
+  border-left-color:var(--accent2);
   text-decoration:none;
-  box-shadow:0 2px 8px rgba(24,151,220,.12);
+  box-shadow:0 4px 14px rgba(24,151,220,.15);
+  transform:translateY(-1px);
 }
+.aff-item:hover::after{
+  opacity:1;
+}
+/* Category accent variants */
+.aff-item[data-type="cable"]{border-left-color:#1897dc}
+.aff-item[data-type="adapter"]{border-left-color:#f1731d}
+.aff-item[data-type="tool"]{border-left-color:#2ecc71}
+.aff-item[data-type="charger"]{border-left-color:#9b59b6}
+.aff-item[data-type="hub"]{border-left-color:#e74c3c}
 
 /* Gallery carousel */
 .gallery{position:relative;overflow:hidden;border-radius:14px;background:#f0f1f4}
