@@ -4,23 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devices. PortPic</title>
-  <meta name="description" content="Device library. Find port layouts by model and brand." />
+  <meta name="description" content="Browse device port layouts by model. Visual thumbnails for switches, ONTs, routers, phones, and more." />
   <link rel="icon" href="../assets/images/favicon.ico" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <script defer src="../assets/js/search-index.js"></script>
-  <script defer src="../assets/js/app.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-row">
       <a class="brand" href="../" aria-label="PortPic home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">PortPic</span>
+        <img src="../assets/images/transparent-logo.svg" alt="PortPic" />
       </a>
       <nav class="nav">
         <a class="active" href="../devices/">Devices</a>
-        <a href="../ports/">Ports</a>
-        <a href="../brands/">Brands</a>
         <a href="../guides/">Guides</a>
         <a href="../about/">About</a>
       </nav>
@@ -29,102 +24,153 @@
 
   <main class="wrap page">
     <h1>Devices</h1>
-    <p class="lead">Search models. Sort by intent. Build hubs later.</p>
+    <p class="lead">Find port layouts by model. Click any device to see photos and specs.</p>
 
-    <div class="search-card" role="search" aria-label="Device search">
-      <label class="sr-only" for="q">Search</label>
-      <input id="q" class="search-input" type="search" inputmode="search" placeholder="Search model or brand" autocomplete="off" />
-      <button id="qBtn" class="btn" type="button">Search</button>
-      <div class="search-meta">
-        <span id="resultCount" class="muted"></span>
-      </div>
+    <div class="filter-tabs" aria-label="Filter by category">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="switch">Switches</button>
+      <button class="filter-tab" data-filter="ont">ONTs &amp; Routers</button>
+      <button class="filter-tab" data-filter="phone">Phones</button>
+      <button class="filter-tab" data-filter="other">Other</button>
     </div>
 
-    <div id="results" class="results" aria-live="polite"></div>
+    <div class="device-grid" id="deviceGrid">
+      <a class="device-card" href="../devices/cisco-sg500-52p/" data-cat="switch">
+        <img class="device-thumb" src="../assets/images/Cisco-Model-SG500-52P-Switch-Left-Facing-Ports.jpg" alt="Cisco SG500-52P" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Cisco SG500-52P</div>
+          <p class="muted">52-port Gigabit PoE managed switch</p>
+        </div>
+      </a>
 
-    <h2 class="h2" style="margin-top:24px">Network switches</h2>
-    <section class="grid-3">
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/cisco-sg500-52p/">Cisco SG500-52P</a></h2>
-        <p class="muted">52-port Gigabit PoE managed switch.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/cisco-sf300-24/">Cisco SF300-24</a></h2>
-        <p class="muted">24-port 10/100 PoE managed switch.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/adtran-netvanta-3448/">Adtran NetVanta 3448</a></h2>
-        <p class="muted">48-port managed Ethernet switch.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/netgear-fs116/">Netgear FS116 ProSafe</a></h2>
-        <p class="muted">16-port 10/100 unmanaged switch with PoE.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/zyxel-gs-108i/">Zyxel GS-108I</a></h2>
-        <p class="muted">8-port Gigabit unmanaged desktop switch.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/alcatel-lucent-7210-sas-k/">Alcatel-Lucent 7210 SAS-K</a></h2>
-        <p class="muted">Carrier Ethernet service access switch.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/nokia-4210-sas-k/">Nokia 4210 SAS-K</a></h2>
-        <p class="muted">Carrier Ethernet service access switch.</p>
-      </article>
-    </section>
+      <a class="device-card" href="../devices/cisco-sf300-24/" data-cat="switch">
+        <img class="device-thumb" src="../assets/images/Cisco-SF300-24-Port-10100-PoE-1.jpg" alt="Cisco SF300-24" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Cisco SF300-24</div>
+          <p class="muted">24-port 10/100 PoE managed switch</p>
+        </div>
+      </a>
 
-    <h2 class="h2" style="margin-top:24px">ONTs and routers</h2>
-    <section class="grid-3">
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/nokia-g-240g-a/">Nokia G-240G-A ONT</a></h2>
-        <p class="muted">GPON optical network terminal.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/nokia-i-240g-c/">Nokia I-240G-C ONT</a></h2>
-        <p class="muted">Indoor GPON optical network terminal.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/alcatel-lucent-g-010-a/">Alcatel-Lucent G-010-A ONT</a></h2>
-        <p class="muted">GPON optical network terminal.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/adtran-838/">Adtran 838</a></h2>
-        <p class="muted">ADSL/SHDSL router.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/edgewater-iad-2900a/">Edgewater IAD 2900A</a></h2>
-        <p class="muted">Integrated access device for VoIP and data.</p>
-      </article>
-    </section>
+      <a class="device-card" href="../devices/adtran-netvanta-3448/" data-cat="switch">
+        <img class="device-thumb" src="../assets/images/Adtran-ModelNetVanta-3448_Back-and-Ports.jpg" alt="Adtran NetVanta 3448" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Adtran NetVanta 3448</div>
+          <p class="muted">48-port managed Ethernet switch</p>
+        </div>
+      </a>
 
-    <h2 class="h2" style="margin-top:24px">Phones</h2>
-    <section class="grid-3">
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/yealink-t42s/">Yealink T42S</a></h2>
-        <p class="muted">SIP VoIP business phone.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/meridian-phone/">Nortel Meridian Phone</a></h2>
-        <p class="muted">Digital business phone for Nortel PBX.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/nortel-m7208/">Nortel M7208</a></h2>
-        <p class="muted">Digital business phone for Norstar systems.</p>
-      </article>
-    </section>
+      <a class="device-card" href="../devices/netgear-fs116/" data-cat="switch">
+        <img class="device-thumb" src="../assets/images/Model-FS116-ProSafe-16-Port-10_100-Switch-w_PoE.jpg" alt="Netgear FS116 ProSafe" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Netgear FS116 ProSafe</div>
+          <p class="muted">16-port 10/100 unmanaged switch</p>
+        </div>
+      </a>
 
-    <h2 class="h2" style="margin-top:24px">Other devices</h2>
-    <section class="grid-3">
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/roku-2-xs/">Roku 2 XS</a></h2>
-        <p class="muted">1080p streaming media player.</p>
-      </article>
-      <article class="card">
-        <h2 class="h3"><a class="link" href="../devices/brother-p-touch-cube-plus/">Brother P-Touch CUBE Plus</a></h2>
-        <p class="muted">Portable Bluetooth label maker.</p>
-      </article>
-    </section>
+      <a class="device-card" href="../devices/zyxel-gs-108i/" data-cat="switch">
+        <img class="device-thumb" src="../assets/images/Zyxel-GS-108I_Lights-1.jpg" alt="Zyxel GS-108I" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Zyxel GS-108I</div>
+          <p class="muted">8-port Gigabit unmanaged desktop switch</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/alcatel-lucent-7210-sas-k/" data-cat="switch">
+        <img class="device-thumb" src="../assets/images/Alcatel-Lucent-7210-SAS-K-ETR-Service-Access-Switch_Ports.jpg" alt="Alcatel-Lucent 7210 SAS-K" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Alcatel-Lucent 7210 SAS-K</div>
+          <p class="muted">Carrier Ethernet service access switch</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/nokia-4210-sas-k/" data-cat="switch">
+        <img class="device-thumb" src="../assets/images/Nokia-4210-SAS-K-Service-Access-Switch.jpg" alt="Nokia 4210 SAS-K" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Nokia 4210 SAS-K</div>
+          <p class="muted">Carrier Ethernet service access switch</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/nokia-g-240g-a/" data-cat="ont">
+        <img class="device-thumb" src="../assets/images/Nokia-G-240G-A-Opical-Network-Terminal_ONT-Front.jpg" alt="Nokia G-240G-A ONT" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Nokia G-240G-A ONT</div>
+          <p class="muted">GPON optical network terminal</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/nokia-i-240g-c/" data-cat="ont">
+        <img class="device-thumb" src="../assets/images/ONT-Model-I-240G-C-Ports-1.jpg" alt="Nokia I-240G-C ONT" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Nokia I-240G-C ONT</div>
+          <p class="muted">Indoor GPON optical network terminal</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/alcatel-lucent-g-010-a/" data-cat="ont">
+        <img class="device-thumb" src="../assets/images/Alcatel_Lucent-Model-G-010-A-Ports.jpg" alt="Alcatel-Lucent G-010-A ONT" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Alcatel-Lucent G-010-A ONT</div>
+          <p class="muted">GPON optical network terminal</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/adtran-838/" data-cat="ont">
+        <img class="device-thumb" src="../assets/images/Adtran-838__SHDSL_Ports.jpg" alt="Adtran 838" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Adtran 838</div>
+          <p class="muted">ADSL/SHDSL router</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/edgewater-iad-2900a/" data-cat="ont">
+        <img class="device-thumb" src="../assets/images/Edgewater-IAD-Model-2900A-Front.jpg" alt="Edgewater IAD 2900A" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Edgewater IAD 2900A</div>
+          <p class="muted">Integrated access device for VoIP and data</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/yealink-t42s/" data-cat="phone">
+        <img class="device-thumb" src="../assets/images/Yealink-T425-Front.jpg" alt="Yealink T42S" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Yealink T42S</div>
+          <p class="muted">SIP VoIP business phone</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/meridian-phone/" data-cat="phone">
+        <img class="device-thumb" src="../assets/images/Meridian-Phone-1.jpg" alt="Nortel Meridian Phone" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Nortel Meridian Phone</div>
+          <p class="muted">Digital business phone for Nortel PBX</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/nortel-m7208/" data-cat="phone">
+        <img class="device-thumb" src="../assets/images/Nortel-Model-M7208-Back-.jpg" alt="Nortel M7208" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Nortel M7208</div>
+          <p class="muted">Digital business phone for Norstar systems</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/roku-2-xs/" data-cat="other">
+        <img class="device-thumb" src="../assets/images/Roku_2_XS_1080p_Streaming-Player_Rear_Ports.jpeg" alt="Roku 2 XS" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Roku 2 XS</div>
+          <p class="muted">1080p streaming media player</p>
+        </div>
+      </a>
+
+      <a class="device-card" href="../devices/brother-p-touch-cube-plus/" data-cat="other">
+        <img class="device-thumb" src="../assets/images/P-Touch-CUBE-Plus-Ports.jpg" alt="Brother P-Touch CUBE Plus" loading="lazy" />
+        <div class="device-card-body">
+          <div class="h3">Brother P-Touch CUBE Plus</div>
+          <p class="muted">Portable Bluetooth label maker</p>
+        </div>
+      </a>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -136,5 +182,23 @@
       </div>
     </div>
   </footer>
+
+  <script>
+  (function(){
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+    var tabs = document.querySelectorAll('.filter-tab');
+    var cards = document.querySelectorAll('.device-card');
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        tabs.forEach(function(t){ t.classList.remove('active'); });
+        tab.classList.add('active');
+        var f = tab.getAttribute('data-filter');
+        cards.forEach(function(c){
+          c.style.display = (f === 'all' || c.getAttribute('data-cat') === f) ? '' : 'none';
+        });
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

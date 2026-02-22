@@ -40,6 +40,7 @@ a:hover{text-decoration:underline}
   gap:16px;
 }
 .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.brand img{height:36px;width:auto;display:block}
 .brand-mark{
   width:16px;height:16px;border-radius:6px;
   background:linear-gradient(135deg,var(--accent),var(--accent2));
@@ -387,3 +388,107 @@ h1{font-size:44px;line-height:1.05;margin:10px 0 10px}
   transition:opacity .2s;
 }
 .photo-grid img:hover{opacity:.85}
+
+/* Device thumbnail cards */
+.device-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  padding:18px 0;
+}
+.device-card{
+  display:block;
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:border-color .2s, transform .15s;
+}
+.device-card:hover{
+  border-color:rgba(89,178,255,.4);
+  transform:translateY(-2px);
+  text-decoration:none;
+}
+.device-thumb{
+  width:100%;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  display:block;
+  background:rgba(0,0,0,.2);
+}
+.device-card-body{padding:12px 14px}
+.device-card-body .h3{margin:0 0 4px}
+.device-card-body .muted{margin:0;font-size:14px}
+@media (max-width:920px){
+  .device-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:480px){
+  .device-grid{grid-template-columns:1fr}
+}
+
+/* Filter tabs */
+.filter-tabs{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  padding:8px 0;
+}
+.filter-tab{
+  color:var(--muted);
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+  cursor:pointer;
+  font-size:14px;
+  font-family:inherit;
+  transition:color .2s, border-color .2s, background .2s;
+}
+.filter-tab:hover{color:var(--text)}
+.filter-tab.active{
+  color:var(--text);
+  border-color:rgba(89,178,255,.5);
+  background:rgba(89,178,255,.12);
+}
+
+/* Section label */
+.section-label{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--muted);
+  margin:0 0 6px;
+}
+
+/* Homepage hero simplified */
+.hero-simple{
+  text-align:center;
+  padding:36px 0 10px;
+}
+.hero-simple h1{font-size:36px;margin:0 0 8px}
+.hero-simple .lead{margin:0 0 18px}
+.hero-simple .search-card{
+  max-width:520px;
+  margin:0 auto;
+}
+
+/* Guide card enhancements */
+.guide-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:16px;
+  transition:border-color .2s;
+}
+.guide-card:hover{border-color:rgba(89,178,255,.35)}
+.guide-card .h3{margin:0 0 4px}
+.guide-card .muted{margin:0;font-size:14px}
+.guide-card .sub{font-size:13px;color:var(--accent);margin-top:6px}
+
+/* Affiliate item hover */
+.aff-item:hover{
+  border-color:rgba(89,178,255,.45);
+  text-decoration:none;
+}
