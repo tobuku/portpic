@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ethernet LED meanings. PortPic</title>
+  <meta name="description" content="Ethernet guide. Link LED, activity LED, speed hints. Fix steps for common port issues." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a href="/devices/">Devices</a>
+        <a href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a class="active" href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>Ethernet LED meanings</h1>
+    <p class="lead">Two LEDs per port. One for link. One for activity or speed.</p>
+
+    <section class="card prose">
+      <h2 class="h2">LED basics</h2>
+      <ul>
+        <li>Solid green. Link established. Connection is up.</li>
+        <li>Blinking green. Data activity. Normal traffic.</li>
+        <li>Amber or orange. Often indicates 100Mbps instead of 1Gbps.</li>
+        <li>No light. No link. Check cable, port, or device power.</li>
+      </ul>
+
+      <h2 class="h2">Cable rules</h2>
+      <ul>
+        <li>Cat5e supports up to 1Gbps at 100m.</li>
+        <li>Cat6 supports up to 10Gbps at 55m.</li>
+        <li>Cat6a supports 10Gbps at full 100m.</li>
+        <li>Bad crimps cause intermittent drops. Re-terminate or replace.</li>
+      </ul>
+
+      <h2 class="h2">PoE basics</h2>
+      <ul>
+        <li>PoE delivers power over Ethernet cable. No separate power adapter.</li>
+        <li>802.3af provides up to 15.4W per port.</li>
+        <li>802.3at provides up to 30W per port.</li>
+        <li>Check switch PoE budget before adding devices.</li>
+      </ul>
+
+      <div class="aff-box" aria-label="Affiliate block">
+        <div class="aff-title">Recommended gear</div>
+        <div class="aff-grid">
+          <a class="aff-item" href="#" rel="nofollow">Cat6a Ethernet cable</a>
+          <a class="aff-item" href="#" rel="nofollow">Ethernet cable tester</a>
+          <a class="aff-item" href="#" rel="nofollow">PoE injector</a>
+        </div>
+        <div class="muted small">Replace links with affiliate URLs.</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2 class="h3">Next</h2>
+        <p class="muted">Optical audio for TV setups.</p>
+        <a class="link" href="/guides/optical-audio/">Optical audio guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Related</h2>
+        <p class="muted">Network device port layouts.</p>
+        <a class="link" href="/devices/">Device library</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">&copy; <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dock and hub checklist. PortPic</title>
+  <meta name="description" content="Dock guide. Avoid wrong hubs. Match laptop port support before buying." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a href="/devices/">Devices</a>
+        <a href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a class="active" href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>Dock and hub checklist</h1>
+    <p class="lead">A dock adds ports. But only if your laptop supports the features.</p>
+
+    <section class="card prose">
+      <h2 class="h2">Before you buy</h2>
+      <ul>
+        <li>Check if your USB-C port supports video output. Not all do.</li>
+        <li>Check if your USB-C port supports power delivery. Needed for charging through dock.</li>
+        <li>Check the watt rating. Dock pass-through must match your charger.</li>
+      </ul>
+
+      <h2 class="h2">Hub vs dock</h2>
+      <ul>
+        <li>Hub. Portable. Usually bus-powered. Fewer ports.</li>
+        <li>Dock. Stationary. Has its own power supply. More ports.</li>
+        <li>Thunderbolt dock. Highest bandwidth. Most external displays supported.</li>
+      </ul>
+
+      <h2 class="h2">Display limits</h2>
+      <ul>
+        <li>USB-C with DP Alt Mode. Usually one external display.</li>
+        <li>Thunderbolt 3. Up to two 4K displays.</li>
+        <li>Thunderbolt 4. Guaranteed two 4K or one 8K display.</li>
+        <li>DisplayLink docks use software drivers. Lower performance.</li>
+      </ul>
+
+      <div class="aff-box" aria-label="Affiliate block">
+        <div class="aff-title">Recommended gear</div>
+        <div class="aff-grid">
+          <a class="aff-item" href="#" rel="nofollow">USB-C hub with HDMI</a>
+          <a class="aff-item" href="#" rel="nofollow">Thunderbolt 4 dock</a>
+          <a class="aff-item" href="#" rel="nofollow">USB-C charger, 100W</a>
+        </div>
+        <div class="muted small">Replace links with affiliate URLs.</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2 class="h3">Next</h2>
+        <p class="muted">Understand USB-C port markings first.</p>
+        <a class="link" href="/guides/usb-c/">USB-C guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Related</h2>
+        <p class="muted">DisplayPort for multi-monitor setups.</p>
+        <a class="link" href="/guides/displayport/">DisplayPort guide</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">&copy; <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

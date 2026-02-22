@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HDMI versions and limits. PortPic</title>
+  <meta name="description" content="HDMI guide. Bandwidth, 4K, HDR, ARC, eARC explained. Pick the right cable version." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a href="/devices/">Devices</a>
+        <a href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a class="active" href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>HDMI versions and limits</h1>
+    <p class="lead">Not all HDMI ports are equal. Version determines what works.</p>
+
+    <section class="card prose">
+      <h2 class="h2">Version basics</h2>
+      <ul>
+        <li>HDMI 1.4. Supports 4K at 30Hz. No HDR.</li>
+        <li>HDMI 2.0. Supports 4K at 60Hz. HDR support.</li>
+        <li>HDMI 2.1. Supports 4K at 120Hz, 8K at 60Hz. eARC, VRR.</li>
+      </ul>
+
+      <h2 class="h2">ARC and eARC</h2>
+      <ul>
+        <li>ARC sends audio from TV to soundbar over HDMI. Limited formats.</li>
+        <li>eARC supports lossless audio. Requires HDMI 2.1 on both devices.</li>
+        <li>Check which HDMI port on the TV supports ARC. Usually only one.</li>
+      </ul>
+
+      <h2 class="h2">Cable rules</h2>
+      <ul>
+        <li>High Speed cables handle up to HDMI 2.0 features.</li>
+        <li>Ultra High Speed cables needed for HDMI 2.1 features.</li>
+        <li>Cable length matters. Over 3m may need active cable for 4K 120Hz.</li>
+      </ul>
+
+      <div class="aff-box" aria-label="Affiliate block">
+        <div class="aff-title">Recommended gear</div>
+        <div class="aff-grid">
+          <a class="aff-item" href="#" rel="nofollow">Ultra High Speed HDMI cable</a>
+          <a class="aff-item" href="#" rel="nofollow">HDMI 2.1 splitter</a>
+          <a class="aff-item" href="#" rel="nofollow">HDMI to DisplayPort adapter</a>
+        </div>
+        <div class="muted small">Replace links with affiliate URLs.</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2 class="h3">Next</h2>
+        <p class="muted">Compare DisplayPort and HDMI side by side.</p>
+        <a class="link" href="/guides/displayport/">DisplayPort guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Related</h2>
+        <p class="muted">USB-C can carry HDMI signal.</p>
+        <a class="link" href="/guides/usb-c/">USB-C guide</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">&copy; <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

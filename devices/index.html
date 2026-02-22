@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devices. PortPic</title>
+  <meta name="description" content="Device library. Find port layouts by model and brand." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/search-index.js"></script>
+  <script defer src="/assets/js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a class="active" href="/devices/">Devices</a>
+        <a href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>Devices</h1>
+    <p class="lead">Search models. Sort by intent. Build hubs later.</p>
+
+    <div class="search-card" role="search" aria-label="Device search">
+      <label class="sr-only" for="q">Search</label>
+      <input id="q" class="search-input" type="search" inputmode="search" placeholder="Search model or brand" autocomplete="off" />
+      <button id="qBtn" class="btn" type="button">Search</button>
+      <div class="search-meta">
+        <span id="resultCount" class="muted"></span>
+      </div>
+    </div>
+
+    <div id="results" class="results" aria-live="polite"></div>
+
+    <section class="grid-3">
+      <article class="card">
+        <h2 class="h3">TV</h2>
+        <p class="muted">Ports, eARC, HDMI limits, optical.</p>
+        <a class="link" href="/guides/hdmi/">HDMI guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Network</h2>
+        <p class="muted">Switch ports, PoE, SFP, uplinks.</p>
+        <a class="link" href="/guides/ethernet/">Ethernet guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Laptop</h2>
+        <p class="muted">USB-C modes, docks, chargers.</p>
+        <a class="link" href="/guides/usb-c/">USB-C guide</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">&copy; <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

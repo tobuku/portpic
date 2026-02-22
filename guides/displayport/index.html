@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DisplayPort vs HDMI. PortPic</title>
+  <meta name="description" content="DisplayPort guide. When DP wins over HDMI. Adapter rules and refresh rate checks." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a href="/devices/">Devices</a>
+        <a href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a class="active" href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>DisplayPort vs HDMI</h1>
+    <p class="lead">DP handles higher refresh rates. HDMI is more common on TVs.</p>
+
+    <section class="card prose">
+      <h2 class="h2">When DisplayPort wins</h2>
+      <ul>
+        <li>High refresh monitors. 144Hz, 240Hz gaming displays.</li>
+        <li>Daisy chaining. DP supports multi-monitor chains.</li>
+        <li>Adaptive sync. FreeSync and G-Sync work best over DP.</li>
+      </ul>
+
+      <h2 class="h2">Adapter rules</h2>
+      <ul>
+        <li>DP to HDMI works with a passive adapter for basic signals.</li>
+        <li>HDMI to DP needs an active adapter. More expensive.</li>
+        <li>USB-C Alt Mode can carry DP signal natively.</li>
+      </ul>
+
+      <h2 class="h2">Version comparison</h2>
+      <ul>
+        <li>DP 1.2. 4K at 60Hz. Common on older monitors.</li>
+        <li>DP 1.4. 4K at 120Hz, 8K at 60Hz with DSC.</li>
+        <li>DP 2.1. 8K at 60Hz without DSC. Future standard.</li>
+      </ul>
+
+      <div class="aff-box" aria-label="Affiliate block">
+        <div class="aff-title">Recommended gear</div>
+        <div class="aff-grid">
+          <a class="aff-item" href="#" rel="nofollow">DisplayPort 1.4 cable</a>
+          <a class="aff-item" href="#" rel="nofollow">DP to HDMI adapter</a>
+          <a class="aff-item" href="#" rel="nofollow">USB-C to DP cable</a>
+        </div>
+        <div class="muted small">Replace links with affiliate URLs.</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2 class="h3">Next</h2>
+        <p class="muted">Check HDMI version limits on your TV.</p>
+        <a class="link" href="/guides/hdmi/">HDMI guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Related</h2>
+        <p class="muted">USB-C carries DP signal via Alt Mode.</p>
+        <a class="link" href="/guides/usb-c/">USB-C guide</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">&copy; <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

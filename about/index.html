@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About. PortPic</title>
+  <meta name="description" content="About PortPic. Roadmap, monetization plan, and content approach." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a href="/devices/">Devices</a>
+        <a href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a href="/guides/">Guides</a>
+        <a class="active" href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>About</h1>
+    <p class="lead">A fast port reference site with guides built for search intent.</p>
+
+    <section class="card prose">
+      <h2 class="h2">Roadmap</h2>
+      <ol>
+        <li>Build brand hubs and port hubs.</li>
+        <li>Expand guides for compatibility searches.</li>
+        <li>Add device pages with consistent specs blocks.</li>
+        <li>Add affiliate blocks on guides and high intent device pages.</li>
+        <li>Add sponsorship slots on hubs.</li>
+        <li>Add a data feed later, behind paid access.</li>
+      </ol>
+
+      <h2 class="h2">Page types</h2>
+      <ul>
+        <li>Device pages. Model, ports list, photos, common setups.</li>
+        <li>Brand hubs. Brand overview, top models, internal links.</li>
+        <li>Port hubs. What it is, limits, adapters, common issues.</li>
+        <li>Guides. Fix steps and buying checks.</li>
+      </ul>
+
+      <h2 class="h2">Metrics to track</h2>
+      <ul>
+        <li>Search clicks per guide.</li>
+        <li>Affiliate click rate on guide blocks.</li>
+        <li>Pages per session from hub internal links.</li>
+        <li>Top exit pages to rewrite.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">&copy; <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

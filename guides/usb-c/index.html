@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>USB-C. Data, video, power. PortPic</title>
+  <meta name="description" content="USB-C guide. Identify support for charging, data, and video. Pick the right cable and hub." />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="/" aria-label="PortPic home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PortPic</span>
+      </a>
+      <nav class="nav">
+        <a href="/devices/">Devices</a>
+        <a href="/ports/">Ports</a>
+        <a href="/brands/">Brands</a>
+        <a class="active" href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page">
+    <h1>USB-C. Data, video, power</h1>
+    <p class="lead">USB-C is a shape. Features vary by device.</p>
+
+    <section class="card prose">
+      <h2 class="h2">Fast checks</h2>
+      <ul>
+        <li>Look for a lightning icon. Often signals higher feature support.</li>
+        <li>Look for DisplayPort logo. Often signals video output support.</li>
+        <li>Look for SS marking. Signals higher speed USB modes.</li>
+      </ul>
+
+      <h2 class="h2">Cable rules</h2>
+      <ul>
+        <li>Charging works with most USB-C cables, speed differs.</li>
+        <li>Video needs a port with video support and a cable rated for it.</li>
+        <li>High watt charging needs an e-marked cable.</li>
+      </ul>
+
+      <h2 class="h2">Hub rules</h2>
+      <ul>
+        <li>A hub cannot add video support if the port lacks it.</li>
+        <li>4K at higher refresh needs higher bandwidth.</li>
+        <li>Power pass-through needs a charger with enough watt rating.</li>
+      </ul>
+
+      <div class="aff-box" aria-label="Affiliate block">
+        <div class="aff-title">Recommended gear</div>
+        <div class="aff-grid">
+          <a class="aff-item" href="#" rel="nofollow">USB-C cable, 100W, e-marked</a>
+          <a class="aff-item" href="#" rel="nofollow">USB-C hub with HDMI</a>
+          <a class="aff-item" href="#" rel="nofollow">USB-C charger, 65W</a>
+        </div>
+        <div class="muted small">Replace links with affiliate URLs.</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2 class="h3">Next</h2>
+        <p class="muted">HDMI limits matter after USB-C video.</p>
+        <a class="link" href="/guides/hdmi/">HDMI guide</a>
+      </article>
+      <article class="card">
+        <h2 class="h3">Related</h2>
+        <p class="muted">Dock checklist for laptops.</p>
+        <a class="link" href="/guides/docks/">Dock guide</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div class="muted">&copy; <span id="yr"></span> PortPic</div>
+      <div class="footer-links">
+        <a href="/about/">About</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("yr").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
