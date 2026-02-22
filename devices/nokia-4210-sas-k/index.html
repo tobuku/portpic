@@ -83,8 +83,7 @@
   </footer>
   <script>document.getElementById("yr").textContent=String(new Date().getFullYear());</script>
   <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbImg" src="" alt="Full size" /></div>
-  <script>
-    document.querySelectorAll(".photo-grid img").forEach(function(img){img.addEventListener("click",function(){var lb=document.getElementById("lb");document.getElementById("lbImg").src=this.src;lb.classList.add("open");});});
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="../../assets/js/gallery.js"></script>
 </body>
 </html>
