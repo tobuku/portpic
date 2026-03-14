@@ -5,26 +5,163 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Page not found. PortPic</title>
   <meta name="robots" content="noindex" />
-  <link rel="icon" href="./assets/images/favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script>
+    // Redirect old WordPress URLs to new static site equivalents
+    var redirects = {
+      // --- Devices (high traffic) ---
+      '/nokia-g-240g-a-opical-network-terminal-ont/':   '/devices/nokia-g-240g-a/',
+      '/nokia-g-240g-a-opical-network-terminal-ont':    '/devices/nokia-g-240g-a/',
+      '/nokia-7219-sas-k-etr/':                         '/devices/nokia-7210-sas-k-etr/',
+      '/nokia-7219-sas-k-etr':                          '/devices/nokia-7210-sas-k-etr/',
+      '/nokia-4210-sas-k-service-access-switch/':       '/devices/nokia-4210-sas-k/',
+      '/nokia-4210-sas-k-service-access-switch':        '/devices/nokia-4210-sas-k/',
+      '/alcatel-lucent/':                               '/devices/alcatel-lucent-g-010-a/',
+      '/alcatel-lucent':                                '/devices/alcatel-lucent-g-010-a/',
+      '/alcatel-lucent-2/':                             '/devices/alcatel-lucent-7210-sas-k/',
+      '/alcatel-lucent-2':                              '/devices/alcatel-lucent-7210-sas-k/',
+      '/alcatel-lucent-3/':                             '/devices/alcatel-g881gb/',
+      '/alcatel-lucent-3':                              '/devices/alcatel-g881gb/',
+      '/alcatel_lucent-model-g-010-a/':                 '/devices/alcatel-lucent-g-010-a/',
+      '/alcatel_lucent-model-g-010-a':                  '/devices/alcatel-lucent-g-010-a/',
+      '/samsung-tv-modelun40n5200afxza/':               '/devices/samsung-un40n5200a/',
+      '/samsung-tv-modelun40n5200afxza':                '/devices/samsung-un40n5200a/',
+      '/samsung-tv-modelun43tu700dfxza/':               '/devices/samsung-un43tu700d/',
+      '/samsung-tv-modelun43tu700dfxza':                '/devices/samsung-un43tu700d/',
+      '/samsung-tv-modelun50tu700dfxza/':               '/devices/samsung-un50tu700d/',
+      '/samsung-tv-modelun50tu700dfxza':                '/devices/samsung-un50tu700d/',
+      '/polycom-soundpoint-ip-331/':                    '/devices/polycom-ip331/',
+      '/polycom-soundpoint-ip-331':                     '/devices/polycom-ip331/',
+      '/polycom-soundpoint-ip450/':                     '/devices/polycom-ip450/',
+      '/polycom-soundpoint-ip450':                      '/devices/polycom-ip450/',
+      '/edgewater-networks-2900-series/':               '/devices/edgewater-2900-v1/',
+      '/edgewater-networks-2900-series':                '/devices/edgewater-2900-v1/',
+      '/edgewater-networks-2900-series-2/':             '/devices/edgewater-2900-v3/',
+      '/edgewater-networks-2900-series-2':              '/devices/edgewater-2900-v3/',
+      '/edgewater-networks-2900-series-3/':             '/devices/edgewater-2900-v3/',
+      '/edgewater-networks-2900-series-3':              '/devices/edgewater-2900-v3/',
+      '/edgewater-networks-4600-series/':               '/devices/edgewater-4600/',
+      '/edgewater-networks-4600-series':                '/devices/edgewater-4600/',
+      '/edgewater-networks-7000-series/':               '/devices/edgewater-7000/',
+      '/edgewater-networks-7000-series':                '/devices/edgewater-7000/',
+      '/lg-tv-model50uq8000aub/':                       '/devices/lg-50uq8000aub/',
+      '/lg-tv-model50uq8000aub':                        '/devices/lg-50uq8000aub/',
+      '/tcl-tv-model43s433/':                           '/devices/tcl-43s433/',
+      '/tcl-tv-model43s433':                            '/devices/tcl-43s433/',
+      '/vizio-d-series-tv-model-d40f-j09/':             '/devices/vizio-d40f-j09/',
+      '/vizio-d-series-tv-model-d40f-j09':              '/devices/vizio-d40f-j09/',
+      '/hp-laptop-15-dw3058cl/':                        '/devices/hp-15-dw3058cl/',
+      '/hp-laptop-15-dw3058cl':                         '/devices/hp-15-dw3058cl/',
+      '/hp-laptop-15-er0056cl-2/':                      '/devices/hp-15-er0056cl/',
+      '/hp-laptop-15-er0056cl-2':                       '/devices/hp-15-er0056cl/',
+      '/asus-laptop-models533ea-sb71/':                 '/devices/asus-s533ea/',
+      '/asus-laptop-models533ea-sb71':                  '/devices/asus-s533ea/',
+      '/lenovo-laptop-model81wq00ckus/':                '/devices/lenovo-81wq00ck/',
+      '/lenovo-laptop-model81wq00ckus':                 '/devices/lenovo-81wq00ck/',
+      '/adtran/':                                       '/devices/adtran-netvanta-3448/',
+      '/adtran':                                        '/devices/adtran-netvanta-3448/',
+      '/netvanta/':                                     '/devices/adtran-netvanta-3448/',
+      '/netvanta':                                      '/devices/adtran-netvanta-3448/',
+      '/cisco-catalyst-2960-series/':                   '/devices/cisco-catalyst-2960/',
+      '/cisco-catalyst-2960-series':                    '/devices/cisco-catalyst-2960/',
+      '/cisco-switch-ports/':                           '/devices/cisco-sg500-52p/',
+      '/cisco-switch-ports':                            '/devices/cisco-sg500-52p/',
+      '/cisco-switch-ports-2/':                         '/devices/cisco-sf300-24/',
+      '/cisco-switch-ports-2':                          '/devices/cisco-sf300-24/',
+      '/meridian-phone/':                               '/devices/meridian-phone/',
+      '/meridian-phone':                                '/devices/meridian-phone/',
+      '/norstar-nortel/':                               '/devices/nortel-m7208/',
+      '/norstar-nortel':                                '/devices/nortel-m7208/',
+      '/nortel-networks/':                              '/devices/nortel-t7208/',
+      '/nortel-networks':                               '/devices/nortel-t7208/',
+      '/p-touch-cube-plus-ports/':                      '/devices/brother-p-touch-cube-plus/',
+      '/p-touch-cube-plus-ports':                       '/devices/brother-p-touch-cube-plus/',
+      '/tripp-lite/':                                   '/devices/tripp-lite-ups/',
+      '/tripp-lite':                                    '/devices/tripp-lite-ups/',
+      '/ultraprobe-550mph/':                            '/devices/ultraprobe-550/',
+      '/ultraprobe-550mph':                             '/devices/ultraprobe-550/',
+      '/milwaukee/':                                    '/devices/milwaukee-radio/',
+      '/milwaukee':                                     '/devices/milwaukee-radio/',
+      '/polycom/':                                      '/devices/polycom-ip331/',
+      '/polycom':                                       '/devices/polycom-ip331/',
+      '/cisco/':                                        '/devices/cisco-sg500-52p/',
+      '/cisco':                                         '/devices/cisco-sg500-52p/',
+
+      // --- Guides / blog posts ---
+      '/blog/':                                                        '/guides/',
+      '/blog':                                                         '/guides/',
+      '/purpose-and-function-of-ethernet-ports/':                      '/guides/ethernet/',
+      '/purpose-and-function-of-ethernet-ports':                       '/guides/ethernet/',
+      '/fiber-optic-subscriber-connector-ports-explained/':            '/guides/',
+      '/fiber-optic-subscriber-connector-ports-explained':             '/guides/',
+      '/providing-fiber-optic-vs-legacy-copper-internet-service/':     '/guides/',
+      '/providing-fiber-optic-vs-legacy-copper-internet-service':      '/guides/',
+      '/the-pros-and-cons-of-wired-ports-and-wireless/':               '/guides/',
+      '/the-pros-and-cons-of-wired-ports-and-wireless':                '/guides/',
+
+      // --- Categories → devices index ---
+      '/category/computers/':          '/devices/',
+      '/category/computers':           '/devices/',
+      '/category/ethernet/':           '/guides/ethernet/',
+      '/category/ethernet':            '/guides/ethernet/',
+      '/category/phones/':             '/devices/',
+      '/category/phones':              '/devices/',
+      '/category/port-pictures/':      '/devices/',
+      '/category/port-pictures':       '/devices/',
+      '/category/printer-2/':          '/devices/',
+      '/category/printer-2':           '/devices/',
+      '/category/switches/':           '/devices/',
+      '/category/switches':            '/devices/',
+      '/category/tvs/':                '/devices/',
+      '/category/tvs':                 '/devices/',
+      '/tag/optical-network-terminal/':'/devices/',
+      '/tag/optical-network-terminal': '/devices/',
+      '/tag/switch-ports/':            '/devices/',
+      '/tag/switch-ports':             '/devices/',
+
+      // --- Misc ---
+      '/home/':             '/',
+      '/home':              '/',
+      '/contact/':          '/about/',
+      '/contact':           '/about/',
+      '/privacy-policy-for-port-picts/': '/about/',
+      '/privacy-policy-for-port-picts':  '/about/',
+    };
+
+    var path = window.location.pathname;
+
+    // Exact match
+    if (redirects[path]) {
+      window.location.replace(redirects[path]);
+    }
+    // Strip trailing slash and try again
+    else if (path.endsWith('/') && redirects[path.slice(0, -1)]) {
+      window.location.replace(redirects[path.slice(0, -1)]);
+    }
+    // Old wp-content image URLs — redirect to devices index
+    else if (path.indexOf('/wp-content/') !== -1) {
+      window.location.replace('/devices/');
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand" href="./" aria-label="PortPic home">
-        <img src="./assets/images/logo.jpg" alt="PortPic" />
+      <a class="brand" href="/" aria-label="PortPic home">
+        <img src="/assets/images/logo.jpg" alt="PortPic" />
       </a>
       <nav class="nav">
-        <a href="./devices/">Devices</a>
-        <a href="./guides/">Guides</a>
-        <a href="./about/">About</a>
+        <a href="/devices/">Devices</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
       </nav>
     </div>
   </header>
   <main class="wrap page">
     <h1>404</h1>
     <p class="lead">Page not found.</p>
-    <a class="btn" href="./">Go home</a>
+    <a class="btn" href="/">Go home</a>
   </main>
 </body>
 </html>
