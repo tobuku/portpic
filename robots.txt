@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /wp-content/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
 
 Sitemap: https://portpic.com/sitemap.xml
