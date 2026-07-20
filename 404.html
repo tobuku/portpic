@@ -185,7 +185,7 @@
     else if (path.endsWith('/') && redirects[path.slice(0, -1)]) {
       window.location.replace(redirects[path.slice(0, -1)]);
     }
-    // Old wp-content image URLs — redirect to devices index
+    // Old wp-content image URLs - redirect to devices index
     else if (path.indexOf('/wp-content/') !== -1) {
       window.location.replace('/devices/');
     }
